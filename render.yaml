@@ -11,7 +11,7 @@ services:
     name: voicestream-landing
     runtime: static
     buildCommand: ""
-    staticPublishPath: .
+    staticPublishPath: ./build
     pullRequestPreviewsEnabled: false
     headers:
       - path: /*

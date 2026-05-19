@@ -1,0 +1,35 @@
+# Render Blueprint: VoiceStream landing page (static site)
+#
+# NYTRO_AI never goes to GitHub, so this folder ships as its own repo.
+# From clients/voicestream/landing/:
+#   git init && git add -A && git commit -m "VoiceStream landing"
+#   git remote add origin <new repo url> && git push -u origin main
+# Then in Render: New > Blueprint, point at that repo. render.yaml is read
+# from the repo root (this folder's root once it is its own repo).
+services:
+  - type: web
+    name: voicestream-landing
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /styles.css
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /app.js
+        name: Cache-Control
+        value: public, max-age=86400
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

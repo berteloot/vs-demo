@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<title>VoiceStream: write once, your voice does the rest</title>
+<meta name="description" content="AI podcast platform for thought leaders. Tell us how you'd use VoiceStream and Stan will reply with a personalized walkthrough." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="https://getvoicestream.com" class="brand" aria-label="VoiceStream home">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <rect x="1.5" y="8" width="2.2" height="6" rx="1.1" fill="currentColor"/>
+        <rect x="5.7" y="5" width="2.2" height="12" rx="1.1" fill="currentColor"/>
+        <rect x="9.9" y="2" width="2.2" height="18" rx="1.1" fill="currentColor"/>
+        <rect x="14.1" y="5" width="2.2" height="12" rx="1.1" fill="currentColor"/>
+        <rect x="18.3" y="8" width="2.2" height="6" rx="1.1" fill="currentColor"/>
+      </svg>
+      <span>VoiceStream</span>
+    </a>
+    <a class="nav-link" href="https://getvoicestream.com">Visit getvoicestream.com →</a>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <span class="kicker">Early access · Personal reply from the founder</span>
+      <h1>
+        Write once.<br/>
+        Your voice <em>does the rest.</em>
+      </h1>
+      <p class="lede">
+        VoiceStream is the podcast platform for people who already write for a living. Drop in articles, newsletters, or notes, generate a script you can edit, pick or clone a voice, and publish to Spotify, Apple, and 20+ platforms. No microphone, no DAW, no production day.
+      </p>
+      <ul class="proof">
+        <li><span>✦</span> Daily news briefings from your own research, in your own cloned voice</li>
+        <li><span>✦</span> Full editorial control. AI drafts, you decide, nothing auto-publishes</li>
+        <li><span>✦</span> Hosting and multi-platform distribution included</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">Tell us what you'd build with VoiceStream</h2>
+      <p class="card-sub">Two minutes. You'll get a personalized video reply from Stan, the founder.</p>
+
+      <form id="vs-form" novalidate>
+        <fieldset>
+          <legend>Pick what fits (one or more)</legend>
+          <div class="options">
+            <label class="opt">
+              <input type="checkbox" name="use_case" value="daily_briefing" />
+              <span class="opt-body">
+                <strong>Run a daily news briefing</strong>
+                <small>Curate, summarize, narrate, publish. 15-30 minutes a day instead of 4 hours.</small>
+              </span>
+            </label>
+            <label class="opt">
+              <input type="checkbox" name="use_case" value="newsletter_to_audio" />
+              <span class="opt-body">
+                <strong>Audio version of my newsletter</strong>
+                <small>Same draft, two channels. Subscribers can listen or read.</small>
+              </span>
+            </label>
+            <label class="opt">
+              <input type="checkbox" name="use_case" value="thought_leadership" />
+              <span class="opt-body">
+                <strong>Authority show without studio time</strong>
+                <small>Executive or consultant. POV episodes, expert digests, solo commentary.</small>
+              </span>
+            </label>
+            <label class="opt">
+              <input type="checkbox" name="use_case" value="voice_clone" />
+              <span class="opt-body">
+                <strong>Clone my voice for consistent production</strong>
+                <small>One sample, every future episode sounds like you. ElevenLabs and Fish Audio supported.</small>
+              </span>
+            </label>
+            <label class="opt">
+              <input type="checkbox" name="use_case" value="b2b_repurpose" />
+              <span class="opt-body">
+                <strong>Repurpose B2B content as audio</strong>
+                <small>Reports, blog posts, webinars become episodes. Same content, second distribution channel.</small>
+              </span>
+            </label>
+            <label class="opt">
+              <input type="checkbox" name="use_case" value="multi_channel" />
+              <span class="opt-body">
+                <strong>Multi-channel content from one library</strong>
+                <small>Podcast plus LinkedIn, newsletter, blog. Same brand voice across all of it.</small>
+              </span>
+            </label>
+            <label class="opt">
+              <input type="checkbox" name="use_case" value="other" />
+              <span class="opt-body">
+                <strong>Something else</strong>
+                <small>Tell me below. I'd like to hear it.</small>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label class="field">
+          <span class="field-label">What would you use it for? <span class="muted">(optional, but it makes the reply better)</span></span>
+          <textarea name="comment" rows="3" maxlength="1000" placeholder="A few sentences about your show, your audience, or the problem you'd solve with VoiceStream."></textarea>
+        </label>
+
+        <label class="field">
+          <span class="field-label">Your email</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+        </label>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">
+            <span class="btn-label">Get my personalized reply</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </button>
+          <p class="legal">We'll only email about VoiceStream. Unsubscribe anytime.</p>
+        </div>
+
+        <div class="form-msg" id="form-msg" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="yr"></span> VoiceStream · Built by <a href="https://getvoicestream.com">getvoicestream.com</a></span>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

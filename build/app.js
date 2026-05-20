@@ -72,11 +72,19 @@
         throw new Error("HTTP " + res.status + (txt ? ": " + txt : ""));
       }
 
+      // Swap the form for a clear confirmation state.
       form.reset();
-      setMsg(
-        "Got it. Stan is recording a short personalized reply right now. Check your inbox in a few minutes.",
-        "success"
-      );
+      setMsg("", "");
+      const formTitle = document.getElementById("form-title");
+      const cardSub = document.querySelector(".card-sub");
+      if (formTitle) formTitle.hidden = true;
+      if (cardSub) cardSub.hidden = true;
+      form.hidden = true;
+      const panel = document.getElementById("vs-success");
+      if (panel) {
+        panel.hidden = false;
+        panel.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
     } catch (err) {
       console.error("VoiceStream form error:", err);
       setMsg(

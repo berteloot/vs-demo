@@ -317,7 +317,8 @@ form legend {
 .muted { color: var(--ink-soft); font-weight: 400; text-transform: none; letter-spacing: 0; font-size: 12.5px; }
 
 .field textarea,
-.field input[type="email"] {
+.field input[type="email"],
+.field input[type="text"] {
   width: 100%;
   padding: 14px 16px;
   background: rgba(255,255,255,0.025);
@@ -328,12 +329,16 @@ form legend {
   font-size: 15px;
   line-height: 1.5;
   transition: all 0.15s ease;
-  resize: vertical;
+  -webkit-appearance: none;
+  appearance: none;
 }
+.field textarea { resize: vertical; }
 .field textarea::placeholder,
-.field input[type="email"]::placeholder { color: var(--ink-soft); }
+.field input[type="email"]::placeholder,
+.field input[type="text"]::placeholder { color: var(--ink-soft); }
 .field textarea:focus,
-.field input[type="email"]:focus {
+.field input[type="email"]:focus,
+.field input[type="text"]:focus {
   outline: none;
   border-color: rgba(45, 212, 191, 0.55);
   background: rgba(255,255,255,0.04);

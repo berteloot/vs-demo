@@ -37,8 +37,13 @@
     const data = new FormData(form);
     const useCases = data.getAll("use_case");
     const comment = (data.get("comment") || "").toString().trim();
+    const firstName = (data.get("first_name") || "").toString().trim();
     const email = (data.get("email") || "").toString().trim();
 
+    if (!firstName) {
+      setMsg("What's your first name? Stan likes to address you properly.", "error");
+      return;
+    }
     if (!validEmail(email)) {
       setMsg("That email doesn't look right. Mind double-checking?", "error");
       return;
@@ -51,6 +56,7 @@
     setLoading(true);
 
     const payload = {
+      first_name: firstName,
       email: email,
       use_cases: useCases,
       comment: comment,
